@@ -12,7 +12,7 @@
           organize and prioritize their daily activities and responsibilities.
         </p>
         <button
-          class="block bg-[#76DE37] hover:bg-lime-600 text-[#000000] px-6 py-2 rounded-xl w-full mb-5"
+          class="block bg-[#271b67] hover:bg-[#1c173e] text-white px-6 py-2 rounded-xl w-full mb-5"
           @click="switchToSignup">
           Get Started
         </button>

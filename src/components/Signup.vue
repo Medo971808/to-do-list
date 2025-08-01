@@ -24,7 +24,7 @@
 
             <p class="text-red-600  px-4 text-md mb-3 font-semibold" v-if="error">{{ error }}</p>
 
-            <button class="w-[100%] lg:w-[60%] bg-[#76DE37] h-10 rounded-xl mb-3" :disabled="isPending">Sign Up</button>
+            <button class="w-[100%] lg:w-[60%] bg-[#271b67] hover:bg-[#1c173e] text-white h-10 rounded-xl mb-3" :disabled="isPending">Sign Up</button>
         </form>
         <p class="text-sm text-black ">
           Don't have an account?
