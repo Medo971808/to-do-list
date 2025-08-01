@@ -1,5 +1,5 @@
 <template>
-  <main class="flex flex-wrap min-h-screen bg-gradient-to-br from-[#111827] via-[#1f2937] to-black items-center justify-center p-4">
+  <main class="flex min-h-screen bg-gradient-to-br from-[#111827] via-[#1f2937] to-black items-center justify-center p-4">
     <section class="lg:w-2/5 lg:block hidden lg:h-[87vh] lg:mr-10 lg:mb-0">
       <img src="../assets/todolist.png" class="w-full h-full object-cover rounded-3xl" alt="To-do List" />
     </section>
@@ -28,9 +28,9 @@
 </template>
 
 <script>
-import Signup from '@/components/Signup.vue';
-import Login from '@/components/Login.vue';
 import { ref } from 'vue';
+import Signup from '@/components/home/Signup';
+import Login from '@/components/home/Login';
 
 export default {
   components: { Signup, Login },

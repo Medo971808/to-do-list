@@ -26,7 +26,7 @@
 
 <script>
 import { ref } from 'vue';
-import Signup from './Signup.vue';
+import Signup from './Signup';
 import useLogin from '@/composables/useLogin';
 import { useRouter } from 'vue-router';
 
