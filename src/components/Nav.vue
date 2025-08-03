@@ -13,7 +13,7 @@
       <h2 class="text-md font-extrabold font-oswald mt-12">Tasks</h2>
       <section class="w-full px-5 text-md text-gray-600 mt-3">
         <article class="text-center flex justify-between mb-2">
-          <router-link><i class="fas fa-angles-right mr-2"></i>Upcoming</router-link>
+          <router-link :to="{ name: 'Upcoming' }"><i class="fas fa-angles-right mr-2"></i>Upcoming</router-link>
           <p class="text-sm font-semibold bg-gray-200 rounded-md w-6">15+</p>
         </article>
 
@@ -34,14 +34,28 @@
         <p class="px-2 text-gray-300 cursor-pointer"><i class="fa-solid fa-plus w-4 mr-2"></i>Add new list</p>
       </section>
       
-      <p class="text-gray-600 text-lg mb-1 mr-1 w-full"><i class="fa-solid fa-bars-staggered mr-3"></i>Settings</p>
-      <p class="text-gray-600 text-lg mr-1"><i class="fas fa-sign-out-alt mr-3"></i>Sign Out</p>
+      <button class="text-gray-600 text-lg mb-1 mr-1 w-full text-left"><i class="fa-solid fa-bars-staggered mr-3"></i>Settings</button>
+      <button class="text-gray-600 text-lg mr-1" @click="handleSignout"><i class="fas fa-sign-out-alt mr-3"></i>Sign Out</button>
+      <p class="text-red-600 px-4 text-md mb-3 font-semibold" v-if="error">{{ error }}</p>
     </aside>
     
 </template>
 
 <script>
-export default {
+import useSignout from '@/composables/useSignout';
+import { useRouter } from 'vue-router';
 
+export default {
+  setup() {
+    const { error, signout, isPending} = useSignout()
+    const router = useRouter()
+
+    const handleSignout = async () => {
+      await signout()
+      if(!error.value) router.push({name : 'Home'})
+    }
+
+    return {error, handleSignout, isPending}
+  }
 }
 </script>

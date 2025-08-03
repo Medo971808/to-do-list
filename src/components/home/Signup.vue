@@ -22,7 +22,7 @@
             class="w-[60%] mb-6 bg-[#FFF9F9] border-2 border-black rounded-lg h-8 pl-5"
             >
 
-            <p class="text-red-600  px-4 text-md mb-3 font-semibold" v-if="error">{{ error }}</p>
+            <p class="text-red-600 px-4 text-md mb-3 font-semibold" v-if="error">{{ error }}</p>
 
             <button class="w-[60%] bg-[#271b67] hover:bg-[#1c173e] text-white h-10 rounded-xl mb-3" :disabled="isPending">Sign Up</button>
         </form>

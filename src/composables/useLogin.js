@@ -3,7 +3,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { ref } from "vue";
 
 const error = ref(null)
-const isPending = ref(null)
+const isPending = ref(false)
 
 const login = async (email, password) => {
     error.value = null
