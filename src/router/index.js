@@ -9,6 +9,7 @@ import Login from '@/views/auth/Login.vue'
 import Signup from '@/views/auth/Signup.vue'
 import Today from '@/components/main/Today.vue'
 import Calendar from '@/components/main/Calendar.vue'
+import NewTask from '@/components/main/NewTask.vue'
 
 const requireAuth = (to, from, next) => {
   let user = auth.currentUser
@@ -56,6 +57,11 @@ const routes = [
         path: '/calendar',
         name: 'Calendar',
         component: Calendar
+      },
+      {
+        path: '/new',
+        name: 'NewTask',
+        component: NewTask
       },
     ],
     beforeEnter: requireAuth

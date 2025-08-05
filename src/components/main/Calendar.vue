@@ -10,7 +10,7 @@
       </button>
     </header>
 
-    <div class="flex gap-2 mb-4">
+    <section class="flex gap-2 mb-4">
       <button
         v-for="view in views"
         :key="view"
@@ -20,7 +20,7 @@
       >
         {{ view }}
       </button>
-    </div>
+    </section>
 
     <section
       class="border border-gray-300 rounded-2xl w-full overflow-y-auto relative"
@@ -28,19 +28,19 @@
     >
       <h2 class="font-bold text-center mt-4 mb-2 text-xl">Tuesday</h2>
 
-      <div class="flex">
-        <div class="w-[12vw] border-r border-gray-200 pr-2">
-          <div
+      <section class="flex">
+        <section class="w-[12vw] border-r border-gray-200 pr-2">
+          <section
             v-for="(hour, index) in hours"
             :key="index"
             class="h-[60px] flex flex-col justify-center text-right pr-2 text-gray-600 text-sm"
           >
             <span>{{ hour.time }}</span>
             <span>{{ hour.period }}</span>
-          </div>
-        </div>
-        <div class="flex-1 relative">
-          <div
+          </section>
+        </section>
+        <section class="flex-1 relative">
+          <section
             v-for="(event, index) in events"
             :key="index"
             class="absolute px-3 py-2 rounded text-sm text-black"
@@ -53,9 +53,9 @@
             }"
           >
             {{ event.title }}
-          </div>
-        </div>
-      </div>
+          </section>
+        </section>
+      </section>
     </section>
   </section>
 </template>

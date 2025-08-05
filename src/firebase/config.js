@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app'
-import { getFirestore, serverTimestamp } from 'firebase/firestore'
+import { getFirestore } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
 
 const firebaseConfig = {
@@ -15,6 +15,5 @@ const firebaseApp = initializeApp(firebaseConfig)
 
 const db = getFirestore(firebaseApp)
 const auth = getAuth(firebaseApp)
-const timestamp = serverTimestamp()
 
-export { db, auth, timestamp }
+export { db, auth }

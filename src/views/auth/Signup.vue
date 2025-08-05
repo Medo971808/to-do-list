@@ -1,6 +1,5 @@
 <template>
   <auth-layout>
-    
     <section class="text-center p-15 block">
       <form @submit.prevent="handleSignup">
         <h1 class="mb-7 font-oswald text-3xl font-extrabold text-left lg:ml-[22%]">Sign up</h1>

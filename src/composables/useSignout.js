@@ -10,9 +10,8 @@ const signout = async () => {
   isPending.value = true;
 
   try {
-    const res = await signOut(auth);
+    await signOut(auth);
     error.value = null;
-    return res;
   } catch (err) {
     error.value = err.message;
   } finally {
