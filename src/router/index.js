@@ -7,6 +7,7 @@ import Hero from '@/components/Hero.vue'
 import Upcoming from '@/views/main/Upcoming.vue'
 import Login from '@/views/auth/Login.vue'
 import Signup from '@/views/auth/Signup.vue'
+import About from '@/views/About.vue'
 import Today from '@/views/main/Today.vue'
 import NewTask from '@/views/tasks/NewTask.vue'
 import TaskDetails from '@/views/tasks/TaskDetails.vue'
@@ -34,6 +35,11 @@ const routes = [
     path: '/login',
     name: 'Login',
     component: Login
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: About
   },
   {
     path: '/main',
