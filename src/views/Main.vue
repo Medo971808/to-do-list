@@ -3,7 +3,7 @@
     class="relative flex min-h-screen bg-gradient-to-br from-[#111827] via-[#1f2937] to-black items-between justify-start px-12 py-5 text-white"
   >
     <i
-      v-if="!showNav"
+      
       class="fa-solid fa-bars text-2xl block lg:hidden mr-3 z-50 cursor-pointer"
       @click="showNav = true"
     ></i>
