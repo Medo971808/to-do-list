@@ -18,7 +18,7 @@
         
         <button class="w-[100%] lg:w-[60%] bg-[#271b67] hover:bg-[#1c173e] text-white h-10 rounded-xl mb-3" :disabled="isPending">Sign In</button>
       </form>
-        <p class="text-sm text-black ">
+        <p class="text-sm text-black">
           Already have an account?
           <router-link :to="{name: 'Signup'}" class="text-black font-bold ml-1" :disabled="isPending">Sign up</router-link>
         </p>

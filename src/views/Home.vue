@@ -1,6 +1,6 @@
 <template>
   <AuthLayout>
-    <h1 class="text-3xl mb-4 font-oswald">ToDo Py</h1>
+    <h1 class="text-4xl mb-4 font-oswald font-bold">Tidy Day</h1>
     <p class="text-[#000000] leading-tight mb-6 text-left">
       Stay Organized, Get Things Done: Your Ultimate To-Do List App.
       A todo list app is a digital task management tool designed to help users
