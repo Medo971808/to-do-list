@@ -21,7 +21,6 @@ const getTasks = (collectionName, userId) => {
     })
     tasks.value = results
     error.value = null
-    console.log(tasks.value)
   }, (err) => {
     console.error(err.message)
     error.value = 'Could not fetch tasks'

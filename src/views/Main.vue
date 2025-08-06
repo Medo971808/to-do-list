@@ -1,10 +1,10 @@
 <template>
   <section
-    class="relative flex min-h-screen bg-gradient-to-br from-[#111827] via-[#1f2937] to-black items-between justify-start px-12 py-5 text-white"
+    class="relative flex min-h-screen bg-gradient-to-br from-[#111827] via-[#1f2937] to-black items-between justify-start px-3 lg:px-12 py-5 text-white"
   >
     <i
       :class="showNav ? 'hidden' : ''"
-      class="fixed fa-solid fa-bars text-2xl block lg:hidden mr-6 z-50 cursor-pointer"
+      class="fixed fa-solid fa-bars text-2xl block lg:hidden z-50 cursor-pointer"
       @click="showNav = true"
     ></i>
 
