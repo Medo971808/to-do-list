@@ -7,7 +7,7 @@
       organize and prioritize their daily activities and responsibilities.
     </p>
     <router-link :to="{name: 'Signup'}"
-      class="block bg-[#271b67] hover:bg-[#1c173e] text-white px-6 py-2 rounded-xl w-full mb-5">
+      class="block bg-[#271b67] hover:bg-[#1c173e] text-white px-6 py-2 rounded-xl w-full mb-3 lg:mb-5">
       Get Started
     </router-link>
     <p class="text-sm text-black">

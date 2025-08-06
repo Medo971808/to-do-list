@@ -106,7 +106,6 @@ export default {
         tasks.value.splice(index, 1)
       }
     }
-    console.log(tasks.value,'hi')
 
     return { tasks, error, handleDelete }
   },

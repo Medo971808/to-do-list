@@ -1,8 +1,8 @@
 <template>
-    <section class="h-full flex items-center">
-        <section class="h-[80vh] lg:h-[95vh] w-[70vw] bg-white rounded-3xl flex flex-col items-center justify-center lg:text-center text-black">
+    <section class="h-full flex items-center justify-center">
+        <section class="h-[50vh] lg:h-[95vh] w-[90vw] lg:w-[70vw] bg-white rounded-3xl flex flex-col items-center justify-center text-center text-black">
             <h1 class=" font-oswald text-3xl mb-10">Wellcome to ToDoPy</h1>
-            <p class=" w-[40vw] mb-10 text-sm lg:text-lg">
+            <p class="w-[70vw] lg:w-[40vw] mb-10 text-sm lg:text-lg">
                 A to-do app is a simple, user-friendly digital tool designed to help individuals and teams 
                 organize tasks and manage their daily activities efficiently. Users can create, edit, and prioritize tasks, 
                 set deadlines or reminders, categorize items, and track their progress, all within an intuitive and accessible interface. 

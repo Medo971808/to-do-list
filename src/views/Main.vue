@@ -2,11 +2,13 @@
   <section
     class="relative flex min-h-screen bg-gradient-to-br from-[#111827] via-[#1f2937] to-black items-between justify-start px-3 lg:px-12 py-5 text-white"
   >
-    <i
-      :class="showNav ? 'hidden' : ''"
-      class="fixed fa-solid fa-bars text-2xl block lg:hidden z-50 cursor-pointer"
-      @click="showNav = true"
-    ></i>
+    <section class="top-0 left-0 flex items-center h-14 w-full fixed bg-[#8B5CF6] px-5">
+      <i
+        :class="showNav ? 'hidden' : ''"
+        class="fa-solid fa-bars text-2xl w-full lg:hidden z-50 cursor-pointer"
+        @click="showNav = true"
+      ></i>
+    </section>
 
     <Nav v-if="!showNav" :user="user" class="hidden lg:block" />
 
@@ -30,7 +32,7 @@
         'transition-all duration-300',
         showNav ? 'blur-sm pointer-events-none' : ''
       ]"
-      class="lg:ml-[23vw] lg:w-[70vw] w-[100vw] ml-10"
+      class="lg:ml-[23vw] lg:w-[70vw] w-[100vw] mt-12"
     >
       <router-view />
     </main>
