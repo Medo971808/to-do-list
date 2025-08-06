@@ -1,26 +1,13 @@
 <template>
   <section class="w-full">
     <header class="flex justify-between items-center mb-4">
-      <h1 class="font-oswald text-4xl tracking-wide">{{ currentDate }}</h1>
-      <button
+      <h1 class="font-oswald text-4xl tracking-wide">{{ currentDate() }}</h1>
+      <router-link :to="{name: 'NewTask'}"
         class="border border-gray-400 px-3 py-1 rounded hover:bg-gray-100 hover:text-black transition"
-        @click="addEvent"
       >
         Add Event
-      </button>
+      </router-link>
     </header>
-
-    <section class="flex gap-2 mb-4">
-      <button
-        v-for="view in views"
-        :key="view"
-        class="border border-gray-300 px-3 py-1 rounded text-sm hover:bg-gray-100 hover:text-black transition"
-        :class="{ 'bg-gray-200 text-black': activeView === view }"
-        @click="activeView = view"
-      >
-        {{ view }}
-      </button>
-    </section>
 
     <section
       class="border border-gray-300 rounded-2xl w-full overflow-y-auto relative"
@@ -62,6 +49,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import getTasks from '@/composables/getTasks'
 
 const hours = ref([
   { time: '12:00', period: 'AM' },
@@ -98,17 +86,15 @@ const events = ref([
   { title: 'Database create for company', start: 6, duration: 1, bg: 'bg-red-200' },
 ])
 
-const views = ['Day', 'Week', 'Month']
-const activeView = ref('Day')
+const dayes = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+const currentDate = function() {
+  const date = new Date()
+  const day = date.getDate()
+  const Dayname = dayes[date.getDay()]
+  const year = date.getFullYear()
+  const month = date.toLocaleString('en-US', { month: 'long' })
 
-const currentDate = '17 October 2023'
-
-function addEvent() {
-  events.value.push({
-    title: 'New Event',
-    start: 4,
-    duration: 1,
-    bg: 'bg-green-200'
-  })
+  return `${Dayname}, ${day} ${month} ${year}`;
 }
+
 </script>
