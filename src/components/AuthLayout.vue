@@ -10,7 +10,7 @@
       />
     </section>
     <section
-      class="flex lg:w-2/5 w-full h-[60vh] lg:h-[87vh] bg-[#FFF9F9] text-center items-center justify-center p-10 rounded-3xl flex-wrap"
+      class="flex lg:w-2/5 w-full h-[70vh] lg:h-[87vh] bg-[#FFF9F9] text-center items-center justify-center p-10 rounded-3xl flex-wrap"
     >
       <section class="w-[90%] lg:w-[75%]">
         <slot />
