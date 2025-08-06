@@ -94,7 +94,6 @@ export default {
         endTime: endTime.value,
         userId: user.value.uid,
         createdAt: serverTimestamp(),
-        completed: false,
       });
 
       if (!error.value) {

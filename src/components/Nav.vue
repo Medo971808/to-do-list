@@ -1,10 +1,9 @@
 <template>
   <aside
-    class="fixed shadow bg-white h-[94vh] w-[20vw] rounded-3xl p-8 overflow-y-auto overflow-x-hidden text-black"
+    class="fixed shadow bg-white h-[100vh] lg:h-[94vh] w-[90%] mt-0 lg:w-[20vw] lg:rounded-3xl rounded-r-3xl p-8 text-black overflow-y-auto"
   >
     <nav class="flex justify-between">
       <h1 class="font-extrabold font-oswald text-2xl" v-if="user">Hello, {{ user.displayName }}</h1>
-      <i class="fa-solid fa-bars text-2xl hidden lg:block"></i>
     </nav>
     <input
       type="search"

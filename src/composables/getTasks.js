@@ -11,7 +11,6 @@ const getTasks = (collectionName, userId) => {
   let q = query(
     colRef,
     where('userId', '==', userId),
-    where('completed', '==', false),
     orderBy('createdAt', 'desc')
   )
 
@@ -22,6 +21,7 @@ const getTasks = (collectionName, userId) => {
     })
     tasks.value = results
     error.value = null
+    console.log(tasks.value)
   }, (err) => {
     console.error(err.message)
     error.value = 'Could not fetch tasks'

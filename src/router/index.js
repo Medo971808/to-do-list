@@ -3,13 +3,14 @@ import { auth } from '@/firebase/config'
 
 import Home from '@/views/Home.vue'
 import Main from '@/views/Main.vue'
-import Hero from '@/components/main/Hero.vue'
-import Upcoming from '@/components/main/Upcoming.vue'
+import Hero from '@/components/Hero.vue'
+import Upcoming from '@/views/main/Upcoming.vue'
 import Login from '@/views/auth/Login.vue'
 import Signup from '@/views/auth/Signup.vue'
-import Today from '@/components/main/Today.vue'
-import Calendar from '@/components/main/Calendar.vue'
-import NewTask from '@/components/main/NewTask.vue'
+import Today from '@/views/main/Today.vue'
+import Calendar from '@/views/main/Calendar.vue'
+import NewTask from '@/views/tasks/NewTask.vue'
+import TaskDetails from '@/views/tasks/TaskDetails.vue'
 
 const requireAuth = (to, from, next) => {
   let user = auth.currentUser
@@ -62,6 +63,11 @@ const routes = [
         path: '/new',
         name: 'NewTask',
         component: NewTask
+      },
+      {
+        path: '/tasks/:id',
+        name: 'TaskDetails',
+        component: TaskDetails
       },
     ],
     beforeEnter: requireAuth
