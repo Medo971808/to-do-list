@@ -19,13 +19,16 @@
         <label
           v-for="task in tasks.filter((t) => t.day === 'today')"
           :key="task.id"
-          class="flex items-center space-x-3"
+          class="flex items-center justify-between"
         >
-          <input type="checkbox" 
-          class="accent-white w-5 h-5" 
-          @change="handleDelete(task.id)"
-          />
-          <router-link :to="`/tasks/${task.id}`">{{ task.title }}</router-link>
+          <section class="flex items-center space-x-3">
+            <input type="checkbox" 
+            class="accent-white w-5 h-5" 
+            @change="handleDelete(task.id)"
+            />
+            <router-link :to="`/tasks/${task.id}`">{{ task.title }}</router-link>
+          </section>
+          <span>{{ task.time }} - {{ task.endTime }}</span>
         </label>
       </section>
     </section>
@@ -45,13 +48,16 @@
         <label
           v-for="task in tasks.filter((t) => t.day === 'tomorrow')"
           :key="task.id"
-          class="flex items-center space-x-3"
+          class="flex items-center justify-between"
         >
-          <input type="checkbox" 
-          class="accent-white w-5 h-5" 
-          @change="handleDelete(task.id)"
-          />
-          <router-link :to="`/tasks/${task.id}`">{{ task.title }}</router-link>
+          <section class="flex items-center space-x-3">
+            <input type="checkbox" 
+            class="accent-white w-5 h-5" 
+            @change="handleDelete(task.id)"
+            />
+            <router-link :to="`/tasks/${task.id}`">{{ task.title }}</router-link>
+          </section>
+          <span>{{ task.time }} - {{ task.endTime }}</span>
         </label>
       </section>
     </section>
@@ -69,13 +75,16 @@
         <label
           v-for="task in tasks.filter((t) => t.day === 'week')"
           :key="task.id"
-          class="flex items-center space-x-3"
+          class="flex items-center justify-between"
         >
-          <input type="checkbox" 
-          class="accent-white w-5 h-5" 
-          @change="handleDelete(task.id)"
-          />
-          <router-link :to="`/tasks/${task.id}`">{{ task.title }}</router-link>
+          <section class="flex items-center space-x-3">
+            <input type="checkbox" 
+            class="accent-white w-5 h-5" 
+            @change="handleDelete(task.id)"
+            />
+            <router-link :to="`/tasks/${task.id}`">{{ task.title }}</router-link>
+          </section>
+          <span>{{ task.time }} - {{ task.endTime }}</span>
         </label>
       </section>
     </section>

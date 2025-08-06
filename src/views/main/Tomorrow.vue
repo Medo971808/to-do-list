@@ -1,13 +1,13 @@
 <template>
   <section class="w-full flex flex-wrap">
-    <h1 class="font-oswald text-4xl tracking-wide">Today</h1>
-    <p class=" border-2 border-white rounded-lg py-1 text-xl ml-5 min-w-16 text-center mt-1" v-if="todayTasks.length > 0">{{ todayTasks.length }}</p>
+    <h1 class="font-oswald text-4xl tracking-wide">Tomorrow</h1>
+    <p class=" border-2 border-white rounded-lg py-1 text-xl ml-5 min-w-16 text-center mt-1" v-if="tomorrowTasks.length > 0">{{ tomorrowTasks.length }}</p>
     <section class="mt-10 pl-10 pr-5 py-5 border-2 border-white rounded-3xl w-full">
-      <h1 class="font-oswald text-3xl mb-3">Today</h1>
+      <h1 class="font-oswald text-3xl mb-3">Tomorrow</h1>
       <router-link :to="{name: 'NewTask'}" class="block border-2 border-white rounded-2xl p-2 w-full text-left mb-2">+ Add new task</router-link>
       <section class="space-y-4">
         <label
-          v-for="task in todayTasks"
+          v-for="task in tomorrowTasks"
           :key="task.id"
           class="flex items-center justify-between"
         >
@@ -39,11 +39,11 @@ export default {
       unsubscribe()
     })
 
-    const todayTasks = computed(() => 
-      tasks.value.filter(task => task.day === 'today')
+    const tomorrowTasks = computed(() => 
+      tasks.value.filter(task => task.day === 'tomorrow')
     )
 
-    return { todayTasks, error }
+    return { tomorrowTasks, error }
   }
 }
 </script>

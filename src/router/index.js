@@ -8,9 +8,10 @@ import Upcoming from '@/views/main/Upcoming.vue'
 import Login from '@/views/auth/Login.vue'
 import Signup from '@/views/auth/Signup.vue'
 import Today from '@/views/main/Today.vue'
-import Calendar from '@/views/main/Calendar.vue'
 import NewTask from '@/views/tasks/NewTask.vue'
 import TaskDetails from '@/views/tasks/TaskDetails.vue'
+import Tomorrow from '@/views/main/Tomorrow.vue'
+import Week from '@/views/main/Week.vue'
 
 const requireAuth = (to, from, next) => {
   let user = auth.currentUser
@@ -55,9 +56,14 @@ const routes = [
         component: Today
       },
       {
-        path: '/calendar',
-        name: 'Calendar',
-        component: Calendar
+        path: '/tomorrow',
+        name: 'Tomorrow',
+        component: Tomorrow
+      },
+      {
+        path: '/week',
+        name: 'Week',
+        component: Week
       },
       {
         path: '/new',
