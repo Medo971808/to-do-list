@@ -40,7 +40,6 @@
         :class="route.name === 'Calendar' ? 'bg-[#DFDFDF] p-1' : ''">
         <span class="flex items-center"><i class="fa-regular fa-calendar mr-2"></i>Calendar</span>
       </router-link>
-      <!-- <router-link class=" mb-2"><i class="fas fa-note-sticky mr-2"></i>Sticky Wall</router-link> -->
     </section>
 
     <h2 class="text-md font-extrabold font-oswald mt-12">Lists</h2>
@@ -61,9 +60,6 @@
       + Add new task</router-link>
     </section>
 
-    <button class="text-gray-600 text-lg mb-1 mr-1 w-full text-left">
-      <i class="fa-solid fa-bars-staggered mr-3"></i>Settings
-    </button>
     <button class="text-gray-600 text-lg mr-1" @click="handleSignout">
       <i class="fas fa-sign-out-alt mr-3"></i>Sign Out
     </button>
